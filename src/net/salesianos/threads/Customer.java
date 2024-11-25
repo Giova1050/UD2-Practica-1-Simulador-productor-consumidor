@@ -16,7 +16,8 @@ public class Customer extends Thread {
     private final int CONSUME_TIME = 2000;
 
     private int consumeTime() {
-        return (int) Math.floor(Math.random() * CONSUME_TIME + 1000);
+        int consuming = (int) Math.floor(Math.random() * CONSUME_TIME) + 1000;
+        return consuming > CONSUME_TIME ? CONSUME_TIME : consuming;
     }
 
     @Override
@@ -24,7 +25,7 @@ public class Customer extends Thread {
         try {
             for (int i = 0; i < vegetablesToConsume; i++) {
                 Thread.sleep(consumeTime());
-                store.eatVegetables(name);
+                this.store.eatVegetables(name);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
