@@ -16,7 +16,7 @@ public class Farmer extends Thread {
     private String[] vegetables = { "lettuce", "cabbage", "onion", "spinach", "potato", "celery", "asparagus", "radish",
             "broccoli", "artichoke", "tomato", "cucumber", "eggplant", "carrot", "green bean" };
     
-    private final int GROWTH_TIME = 3000;
+    private final int GROWTH_TIME = 1000;
 
     public int growthTime() {
         int growthTime = (int) Math.floor(Math.random() * GROWTH_TIME +1000);

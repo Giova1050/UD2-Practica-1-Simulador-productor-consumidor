@@ -13,7 +13,7 @@ public class Customer extends Thread {
         this.vegetablesToConsume = vegetablesToConsume;
     }
 
-    private final int CONSUME_TIME = 2000;
+    private final int CONSUME_TIME = 3000;
 
     private int consumeTime() {
         int consuming = (int) Math.floor(Math.random() * CONSUME_TIME) + 1000;
