@@ -13,6 +13,8 @@ public class App {
         Customer gentleman = new Customer(store, "Mr. Gentleman", 3);
         Customer loquendo = new Customer(store, "Loquendo", 5);
 
+        paco.setPriority(Thread.MAX_PRIORITY);
+        ramon.setPriority(Thread.MAX_PRIORITY);
         paco.start();
         ramon.start();
         faustino.start();
